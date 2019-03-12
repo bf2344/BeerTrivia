@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beer Trivia</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <!-- This div is for our "Start Game" button, it will just say BEER! -->
+        <div id="start">
+            <br>
+            <br>
+            BEER!
+        </div>
+        <!-- This div will hold all the components for our trivia quiz -->
+        <div id="quiz" style="display: none">
+            <!-- this div will contain the question -->
+            <div id="question"></div>
+            <!-- this div will contain the image for each question, I have found this to be quite difficult -->
+            <div id="qImg"></div>
+            <!-- This div will have our three choices for each question -->
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <!-- This will be the 10 second timer with divs inside -->
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <!-- this div will contain the little buttons on the bottom right, they will either be green or red depending on if you were right or wrong on each question -->
+            <div id="progress"></div>
+        </div>
+        <!-- this will only pop up at the end of the quiz, the display none is very vital -->
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/javascript/triviagame.js"></script>
+</body>
+</html>
